@@ -20,7 +20,7 @@ app.use('/api/members', require('./routes/members'));
 app.use('/api/transactions', require('./routes/transactions'));
 app.use('/api/reports', require('./routes/reports'));
 app.use('/api/samruthy', require('./routes/samruthy'));
-app.use('/api/fines', require('./routes/fines'));
+app.use('/api/Fine', require('./routes/Fine'));
 
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'OK', message: 'FinGroup Pro API running' }));
