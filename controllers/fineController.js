@@ -1,4 +1,4 @@
-const Fine = require('../models/Fine');
+const Fine = require('../models/fine');
 const Member = require('../models/Member');
 const AdminLog = require('../models/AdminLog');
 
