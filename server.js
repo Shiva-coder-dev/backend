@@ -9,22 +9,18 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'https://frontend-one-tau-jnkqz09qrj.vercel.app'
-  ],
-  credentials: true
-}));
+app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Routes
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/members', require('./routes/members'));
 app.use('/api/transactions', require('./routes/transactions'));
 app.use('/api/reports', require('./routes/reports'));
 app.use('/api/samruthy', require('./routes/samruthy'));
+app.use('/api/fines', require('./routes/fines'));
 
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'OK', message: 'FinGroup Pro API running' }));
